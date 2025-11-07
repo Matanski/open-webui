@@ -112,7 +112,8 @@ log.setLevel(SRC_LOG_LEVELS["CONFIG"])
 
 WEBUI_NAME = "Solidus Ai"
 
-WEBUI_FAVICON_URL = "https://openwebui.com/favicon.png"
+#WEBUI_FAVICON_URL = "https://openwebui.com/favicon.png"
+WEBUI_FAVICON_URL = "/opt/open-webui/static/favicon.png"
 
 TRUSTED_SIGNATURE_KEY = os.environ.get("TRUSTED_SIGNATURE_KEY", "")
 
