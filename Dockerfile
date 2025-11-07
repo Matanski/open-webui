@@ -163,6 +163,9 @@ RUN if [ "$USE_OLLAMA" = "true" ]; then \
 COPY --chown=$UID:$GID --from=build /app/build /app/build
 COPY --chown=$UID:$GID --from=build /app/CHANGELOG.md /app/CHANGELOG.md
 COPY --chown=$UID:$GID --from=build /app/package.json /app/package.json
+# Copy your custom CSS file into the built frontend
+COPY --chown=$UID:$GID custom.css /app/build/static/custom.css
+# ---------------------
 
 # copy backend files
 COPY --chown=$UID:$GID ./backend .
