@@ -4,7 +4,55 @@
   --primary-bg: #0f1334;
   --hover-bg: #d4e3ed;
 }
+/*
+*******Logon Page
+*/
+#logo {
+  /* --- 1. Sizing (You must set a width) --- */
+  width: 150px !important; 
+  height: auto !important;
 
+  /* --- 2. Force its Position --- */
+  
+  /* This is the key: makes it "fixed" to the screen,
+     ignoring its parent divs */
+  position: fixed !important; 
+  
+  /* --- 3. Center it Horizontally --- */
+  
+  /* Move its left edge to the 50% mark of the screen */
+  left: 50% !important; 
+  
+  /* Pull it back to the left by half of its *own* width,
+     making it perfectly centered. */
+  transform: translateX(-50%) !important; 
+  
+  /* --- 4. Set its Vertical Position --- */
+  
+  /* The 'm-10' class was 2.5rem. This puts it
+     back in the same vertical spot. */
+  top: 16rem !important; 
+  
+  /* --- 5. Clean up --- */
+  
+  /* Reset all margins so they don't interfere */
+  margin: 0 !important; 
+}
+
+#auth-container {
+  color: var(--primary-text) !important;
+  background-color: var(--primary-bg) !important;
+}
+
+#auth-container button {
+  /* This adds a 1px solid white border */
+  border: 2px solid white !important;
+}
+
+
+/*
+********Main Page
+*/
 #sidebar * {
   color: var(--primary-text) !important;
   background-color: var(--primary-bg) !important;
@@ -73,4 +121,5 @@
 #sidebar > div *:hover {
   background-color: var(--hover-text) !important;
 }
+
 
