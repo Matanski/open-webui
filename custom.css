@@ -1,48 +1,76 @@
 :root {
-  --primary-text: #8b1538;
-  --primary-pink: #ff69b4;
-  --primary-bg: #ffe0ec;
-  --hover-bg: #ffc0db;
+  --primary-text: #FFFFFF;
+  --primary-yellow: #ffd600;
+  --primary-bg: #0f1334;
+  --hover-bg: #d4e3ed;
 }
 
-* {
+#sidebar * {
   color: var(--primary-text) !important;
-}
-
-#send-message-button {
-  background-color: var(--primary-pink) !important;
-}
-
-#sidebar {
   background-color: var(--primary-bg) !important;
 }
 
+/* Fixes the profile section's background color */
+#sidebar .sidebar {
+  background-color: var(--primary-bg) !important;
+}
+
+#sidebar-chat-item:hover {
+  background-color: var(--primary-yellow) !important;
+  border: 1px solid var(--primary-text) !important;
+  border-radius: 9999px !important;
+}
+
+/*
+#sidebar-chat-item-menu {
+    background-color: var(--primary-bg) !important;
+    border: 1px solid var(--primary-text) !important;
+    border-radius: 10px !important;
+    background-image: none
+}
+*/
+
+#sidebar-chat-item-menu {
+  /* --- Your existing styles --- */
+  border-radius: 10px !important;
+  background-image: none !important; /* Good, this removes the gradient */
+
+  /* === 1. TO MAKE IT SMALLER === */
+  
+  /* This overrides the HTML padding classes (like pl-5, py-1)
+     and makes a small, uniform box around the "..." */
+  padding: 4px !important; 
+
+  
+  /* === 2. TO CENTER IT VERTICALLY === */
+  
+  /* Override the HTML class 'top-[4px]' */
+  top: 50% !important;
+  
+  /* This pulls the element up by half its own height 
+     to make the centering perfect */
+  transform: translateY(-50%) !important;
+  
+  /* The 'right-1' class from your HTML will still 
+     keep it positioned on the right side. */
+}
+
+/* Removes the fade at the TOP of the sidebar */
+.sidebar-bg-gradient-to-b {
+  background-image: none !important;
+}
+
+/* Removes the fade at the BOTTOM of the sidebar (the one in your picture) */
+.sidebar-bg-gradient-to-t {
+  background-image: none !important;
+}
+
+.sidebar {
+  background-color: var(--primary-bg) !important;
+}
+
+
 #sidebar > div *:hover {
-  background-color: var(--hover-bg) !important;
+  background-color: var(--hover-text) !important;
 }
 
-[aria-label="Voice mode"] {
-  background-color: var(--primary-pink) !important;
-}
-
-.tippy-content {
-  background-color: var(--primary-pink) !important;
-  border-color: var(--primary-pink) !important;
-}
-
-.tippy-box {
-  background-color: var(--primary-pink) !important;
-  border-color: var(--primary-pink) !important;
-}
-
-button[type="submit"] {
-  background-color: var(--primary-pink) !important;
-}
-
-[role="switch"][aria-checked="true"] {
-  background-color: var(--primary-pink) !important;
-}
-
-button.px-3\.5.py-1\.5.text-sm.font-medium.bg-black.hover\:bg-gray-900.text-white.dark\:bg-white.dark\:text-black.dark\:hover\:bg-gray-100.transition.rounded-full {
-  background-color: var(--primary-pink) !important;
-}
